@@ -1,7 +1,6 @@
 #pragma once
 #include "Piece.h"
 #include "Empty.h"
-#include <optional>
 
 class Square
 {
@@ -17,15 +16,7 @@ public:
 	Square() : iColumn(0), iRow(0), m_piece(&emptyPiece)
 	{}
 
-	void setPiece(Piece& piece) {
-		/*std::cout << "setting " << iColumn << "," << iRow << " space to: ";
-		getPiece().describePiece();*/
-		m_piece = &piece;
-	}
+	void setPiece(Piece& piece);
 
-	Piece& getPiece() {
-		return *m_piece;
-	}
-	
-	
+	Piece& getPiece();	
 };
