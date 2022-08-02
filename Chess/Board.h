@@ -10,6 +10,9 @@ class Board
 {
 private:
 	Square board[8][8];
+	Pawn pawnWhite = Pawn(PieceColor::WHITE);
+	Pawn pawnBlack = Pawn(PieceColor::BLACK);
+	Empty empty = Empty();
 
 public:
 	struct Position
