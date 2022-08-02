@@ -1,5 +1,6 @@
 #pragma once
 #include "Piece.h"
+#include <iostream>
 
 class Empty : public Piece
 {
@@ -8,11 +9,6 @@ private:
 	PieceColor m_color = PieceColor::EMPTY;
 
 public:
-	bool isPotentialMove(int currentRow, int currentColumn, int intendedRow, int intendedColumn)
-	{
-		return false;
-	}
-
 	void describePiece()
 	{
 		std::cout << "empty" << std::endl;

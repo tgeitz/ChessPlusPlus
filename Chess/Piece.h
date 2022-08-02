@@ -23,11 +23,6 @@ public:
 
 	PieceColor color;
 	PieceType type;
-
-	//bool canCastle = false;
-	//bool canBeCapturedEnPassant = false;
-
-	virtual bool isPotentialMove(int currentRow, int currentColumn, int intendedRow, int intendedColumn) = 0;
 	
 	virtual void describePiece() = 0;
 };

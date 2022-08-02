@@ -65,12 +65,11 @@ public:
 		std::cout << "currentSquarePiece: ";
 		currentSquarePiece.describePiece();
 		Square& intendedSquare = board[intendedPosition.iRow][intendedPosition.iColumn];
-		if (currentSquare.getPiece().isPotentialMove(currentPosition.iRow, currentPosition.iColumn, intendedPosition.iRow, intendedPosition.iColumn)) {
-			intendedSquare.setPiece(currentSquarePiece);
-			Empty empty = Empty();
-			Piece& emptyPiece = empty;
-			currentSquare.setPiece(emptyPiece);
-		}
+		
+		intendedSquare.setPiece(currentSquarePiece);
+		Empty empty = Empty();
+		Piece& emptyPiece = empty;
+		currentSquare.setPiece(emptyPiece);
 
 		std::cout << "a2 space:";
 		board[0][6].getPiece().describePiece();
