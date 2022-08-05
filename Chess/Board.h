@@ -39,5 +39,7 @@ public:
 	void resetBoard();
 	void setInitialBoard();
 
+	void describeBoard();
+
 	void movePiece(Position currentPosition, Position intendedPosition);
 };

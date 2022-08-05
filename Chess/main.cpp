@@ -10,14 +10,21 @@ int main(int argc, char* argv[])
 	
 	board.resetBoard();
 
+	board.describeBoard();
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+
 	Board::Position currentPosition;
-	currentPosition.iRow = 0;
-	currentPosition.iColumn = 6; 
+	currentPosition.iRow = 6;
+	currentPosition.iColumn = 4; 
 	
 	Board::Position intendedPosition;
-	intendedPosition.iRow = 0;
-	intendedPosition.iColumn = 5;
+	intendedPosition.iRow = 4;
+	intendedPosition.iColumn = 4;
 	board.movePiece(currentPosition, intendedPosition);
+
+	board.describeBoard();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
