@@ -4,7 +4,7 @@
 #include <iostream>
 #include "Board.h"
 
-int main()
+int main(int argc, char* argv[])
 {
 	Board board = Board();
 	
