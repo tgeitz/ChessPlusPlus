@@ -16,8 +16,9 @@ public:
 	struct Move
 	{
 		PlayerColor color;
-		Square startSquare;
-		Square endSquare;
+		Board startingBoard;
+		Board::Position startingPosition;
+		Board::Position intendedPosition;
 	};
 
 	Board& currentBoard;
