@@ -11,6 +11,6 @@ private:
 public:
 	void describePiece()
 	{
-		std::cout << std::string("") << std::endl;
+		std::cout << std::string(" ") << std::endl;
 	}
 };

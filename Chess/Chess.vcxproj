@@ -149,9 +149,14 @@
     <ClInclude Include="Chess.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Board.h" />
+    <ClInclude Include="PieceBishop.h" />
     <ClInclude Include="PieceEmpty.h" />
+    <ClInclude Include="PieceKing.h" />
+    <ClInclude Include="PieceKnight.h" />
     <ClInclude Include="PiecePawn.h" />
     <ClInclude Include="Piece.h" />
+    <ClInclude Include="PieceQueen.h" />
+    <ClInclude Include="PieceRook.h" />
     <ClInclude Include="Square.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
