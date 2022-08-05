@@ -21,8 +21,8 @@ class Piece
 {
 public:
 
-	PieceColor color;
-	PieceType type;
+	PieceColor color = PieceColor::EMPTY;
+	PieceType type = PieceType::EMPTY;
 	
 	virtual void describePiece() = 0;
 };
