@@ -2,7 +2,7 @@
 #include "Piece.h"
 #include <iostream>
 
-class Empty : public Piece
+class PieceEmpty : public Piece
 {
 private:
 	PieceType m_type = PieceType::EMPTY;

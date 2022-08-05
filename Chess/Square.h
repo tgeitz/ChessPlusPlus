@@ -1,13 +1,13 @@
 #pragma once
 #include "Piece.h"
-#include "Empty.h"
+#include "PieceEmpty.h"
 
 class Square
 {
 private:
 	int iColumn = 0;
 	int iRow = 0;
-	Empty emptyPiece = Empty();
+	PieceEmpty emptyPiece = PieceEmpty();
 	Piece* m_piece = &emptyPiece;
 
 public:

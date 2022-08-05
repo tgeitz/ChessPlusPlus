@@ -44,10 +44,10 @@
     <ClInclude Include="Square.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Pawn.h">
+    <ClInclude Include="PiecePawn.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Empty.h">
+    <ClInclude Include="PieceEmpty.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

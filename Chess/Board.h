@@ -1,8 +1,8 @@
 #pragma once
 #include "Square.h"
 #include "Piece.h"
-#include "Pawn.h"
-#include "Empty.h"
+#include "PiecePawn.h"
+#include "PieceEmpty.h"
 #include <iostream>
 
 
@@ -10,9 +10,9 @@ class Board
 {
 private:
 	Square board[8][8];
-	Pawn pawnWhite = Pawn(PieceColor::WHITE);
-	Pawn pawnBlack = Pawn(PieceColor::BLACK);
-	Empty empty = Empty();
+	PiecePawn pawnWhite = PiecePawn(PieceColor::WHITE);
+	PiecePawn pawnBlack = PiecePawn(PieceColor::BLACK);
+	PieceEmpty empty = PieceEmpty();
 
 public:
 	struct Position

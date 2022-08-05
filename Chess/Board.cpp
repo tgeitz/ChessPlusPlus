@@ -1,8 +1,6 @@
 #include "Board.h"
 #include "Square.h"
 #include "Piece.h"
-#include "Pawn.h"
-#include "Empty.h"
 #include <iostream>
 
 void Board::resetBoard()
