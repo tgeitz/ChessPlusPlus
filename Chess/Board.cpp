@@ -23,6 +23,24 @@ void Board::setInitialBoard()
 			}
 		}
 	}
+
+	board[0][0] = Square(0, 0, &rookBlack);
+	board[1][0] = Square(1, 0, &knightBlack);
+	board[2][0] = Square(2, 0, &bishopBlack);
+	board[3][0] = Square(3, 0, &queenBlack);
+	board[4][0] = Square(4, 0, &kingBlack);
+	board[5][0] = Square(5, 0, &bishopBlack);
+	board[6][0] = Square(6, 0, &knightBlack);
+	board[7][0] = Square(7, 0, &rookBlack);
+
+	board[0][7] = Square(0, 7, &rookWhite);
+	board[1][7] = Square(1, 7, &knightWhite);
+	board[2][7] = Square(2, 7, &bishopWhite);
+	board[3][7] = Square(3, 7, &queenWhite);
+	board[4][7] = Square(4, 7, &kingWhite);
+	board[5][7] = Square(5, 7, &bishopWhite);
+	board[6][7] = Square(6, 7, &knightWhite);
+	board[7][7] = Square(7, 7, &rookWhite);
 }
 
 void Board::movePiece(Position currentPosition, Position intendedPosition)
