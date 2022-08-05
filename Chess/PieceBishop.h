@@ -13,6 +13,6 @@ public:
 
 	void describePiece()
 	{
-		std::cout << (m_color == PieceColor::WHITE ? "B" : "b") << std::endl;
+		std::cout << (m_color == PieceColor::WHITE ? "B" : "b");
 	}
 };
