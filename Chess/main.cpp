@@ -2,11 +2,46 @@
 //
 
 #include <iostream>
+#include <string>
+#include "UIConsole.h"
 #include "Board.h"
+
+using namespace std;
 
 int main(int argc, char* argv[])
 {
-	Board board = Board();
+	bool bRun = true;
+
+	UIConsole ui = UIConsole();
+
+	string input = "";
+	UIConsole::CommandType commandType;
+
+	cout << "Welcome to Chess!" << endl;
+	ui.listCommands();
+
+	while (bRun)
+	{
+		cout << "Enter a command and hit ENTER:" << endl;
+		getline(cin, input);
+		
+		commandType = ui.parseInput(input);
+
+		if (commandType == UIConsole::CommandType::HELP) {
+			//
+		}
+
+		if (commandType == UIConsole::CommandType::NEW_GAME) {
+			//
+		}
+
+		if (commandType == UIConsole::CommandType::EXIT) {
+			bRun = false;
+		}
+	}
+
+	return 0;
+	/*Board board = Board();
 	
 	board.resetBoard();
 
@@ -24,7 +59,7 @@ int main(int argc, char* argv[])
 	intendedPosition.iColumn = 4;
 	board.movePiece(currentPosition, intendedPosition);
 
-	board.describeBoard();
+	board.describeBoard();*/
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

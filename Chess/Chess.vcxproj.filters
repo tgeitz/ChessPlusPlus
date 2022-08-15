@@ -27,6 +27,9 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UIConsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chess.h">
@@ -64,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="PieceKnight.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIConsole.h">
+      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -144,6 +144,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Square.cpp" />
+    <ClCompile Include="UIConsole.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Chess.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="PieceQueen.h" />
     <ClInclude Include="PieceRook.h" />
     <ClInclude Include="Square.h" />
+    <ClInclude Include="UIConsole.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
