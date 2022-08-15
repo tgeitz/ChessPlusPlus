@@ -9,3 +9,8 @@ Game::PlayerColor Game::getTurnColor()
 {
 	return Game::PlayerColor::WHITE;
 }
+
+void Game::endGame()
+{
+	gameIsActive = false;
+}

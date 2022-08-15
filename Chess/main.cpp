@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "UIConsole.h"
+#include "Game.h"
 #include "Board.h"
 
 using namespace std;
@@ -32,7 +33,28 @@ int main(int argc, char* argv[])
 		}
 
 		if (commandType == UIConsole::CommandType::NEW_GAME) {
-			//
+			Game currentGame = Game();
+			currentGame.currentBoard->setInitialBoard();
+			
+			while (currentGame.gameIsActive)
+			{
+				cout << "Turn " << currentGame.getTurnNumber() << ": White to move" << endl;
+				cout << "Input a move or command and hit ENTER:" << endl;
+				getline(cin, input);
+
+				if (input == "board") {
+					currentGame.currentBoard->describeBoard();
+				}
+
+				if (input == "end") {
+					currentGame.endGame();
+				}
+
+				if (input == "quit") {
+					currentGame.endGame();
+					bRun = false;
+				}
+			}
 		}
 
 		if (commandType == UIConsole::CommandType::EXIT) {

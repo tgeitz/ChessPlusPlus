@@ -7,6 +7,7 @@
 class Game
 {
 public:
+	bool gameIsActive = true;
 	enum class PlayerColor
 	{
 		WHITE = 0,
@@ -16,15 +17,17 @@ public:
 	struct Move
 	{
 		PlayerColor color;
-		Board startingBoard;
+		Board& startingBoard;
 		Board::Position startingPosition;
 		Board::Position intendedPosition;
 	};
 
-	Board& currentBoard;
+	Board initialBoard = Board();
+	Board* currentBoard = &initialBoard;
 
 	int getTurnNumber();
 	PlayerColor getTurnColor();
+	void endGame();
 
 private:
 	std::vector<Move> moveHistory;
