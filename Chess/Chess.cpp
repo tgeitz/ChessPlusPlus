@@ -27,7 +27,7 @@ bool Chess::isValidMove(Game game, Game::Move move) {
 	if (piece.type == PieceType::PAWN) {
 		if (
 			abs(yDistance) > 2 || abs(yDistance < 1) // moving 0 or more than 2 vertically
-			|| (abs(yDistance) == 2 && (move.startingPosition.iRow != 1 || move.startingPosition.iRow != 6)) // moving 2 when not on starting square
+			|| (abs(yDistance) == 2 && (move.startingPosition.iRow != 1 && move.startingPosition.iRow != 6)) // moving 2 when not on starting square
 			|| ((abs(xDistance) == 1 && !wouldCapture) || abs(xDistance) > 1) // not moving 0 horizontally, or moving 1 when not capturing
 		) {
 			return false;
