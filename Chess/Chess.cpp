@@ -27,12 +27,13 @@ bool Chess::isValidMove(Game game, Game::Move move) {
 	int yDistance = move.startingPosition.iRow - move.intendedPosition.iRow;
 
 	if (piece.type == PieceType::PAWN) {
+		int startingRow = piece.color == PieceColor::WHITE ? 6 : 1;
 		if (
 			// trying to move 0 or more than 2 vertically
 			abs(yDistance) > 2 || abs(yDistance < 1)
-			// trying to move 2 when not on starting square
-			|| (abs(yDistance) == 2 && (move.startingPosition.iRow != 1 && move.startingPosition.iRow != 6))
-			// pawn is trying to move backwards with respect to its color
+			// trying to move 2 vertically when not on starting square
+			|| (abs(yDistance) == 2 && move.startingPosition.iRow != startingRow)
+			// pawn is trying to move backwards vertically with respect to its color
 			|| ((piece.color == PieceColor::WHITE && yDistance < 0) || (piece.color == PieceColor::BLACK && yDistance > 0))
 			// not moving 0 horizontally, or moving 1 horizontally when not capturing
 			|| ((abs(xDistance) == 1 && !wouldCapture) || abs(xDistance) > 1)
