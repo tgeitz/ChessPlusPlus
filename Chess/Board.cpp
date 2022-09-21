@@ -60,9 +60,14 @@ void Board::describeBoard()
 	std::cout << "    a   b   c   d   e   f   g   h" << std::endl;
 }
 
+Square& Board::getSquareForPosition(Position position)
+{
+	return board[position.iRow][position.iColumn];
+}
+
 void Board::movePiece(Position currentPosition, Position intendedPosition)
 {
-	Square& currentSquare = board[currentPosition.iRow][currentPosition.iColumn];
+	Square& currentSquare = getSquareForPosition(currentPosition);
 	Piece& currentSquarePiece = currentSquare.getPiece();
 	Square& intendedSquare = board[intendedPosition.iRow][intendedPosition.iColumn];
 

@@ -41,5 +41,6 @@ public:
 
 	void describeBoard();
 
+	Square& getSquareForPosition(Position position);
 	void movePiece(Position currentPosition, Position intendedPosition);
 };
